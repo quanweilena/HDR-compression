@@ -1,0 +1,7 @@
+function [img_white_xyz_chro,img_white_xyz_tone]=white(img_input_xyz,d)
+
+filter_gau_chro=fspecial('gaussian',[20,20]dim);
+img_white_xyz_chro=imfilter(img_input_xyz,filter_gau_chro);
+
+filter_gau_tone=fspecial('gaussian',[20,20],171);
+img_white_xyz_tone=imfilter(img_input_xyz,filter_gau_tone);
